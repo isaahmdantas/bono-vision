@@ -49,7 +49,6 @@ data = load_data(json_file_path)
 async def read_root():
     return {"message": "API for osteoporosis data analysis"}
 
-
 @app.get("/patients/average_age")
 async def get_average_age():
     total_age = sum(int(patient["Age"]) for patient in data)
@@ -69,20 +68,32 @@ async def get_body_weight():
     return {"body_weight": calculate_proportions(data, 'Body Weight')}
 
 @app.get("/patients/calcium_intake")
-async def get_body_weight(): 
+async def get_calcium_intake(): 
     return {"calcium_intake": calculate_proportions(data, 'Calcium Intake')}
 
 @app.get("/patients/physical_activity")
-async def get_body_weight(): 
+async def get_physical_activity(): 
     return {"physical_activity": calculate_proportions(data, 'Physical Activity')}
 
+@app.get("/patients/total")
+async def get_total_patients():
+    total_patients = len(data)
+    total_with_osteoporosis = sum(1 for patient in data if patient["Osteoporosis"] == "1")
+    total_without_osteoporosis = total_patients - total_with_osteoporosis
+
+
+    return {
+        "total_patients": total_patients,
+        "total_with_osteoporosis": total_with_osteoporosis, 
+        "total_without_osteoporosis": total_without_osteoporosis
+    }
 
 @app.get("/patients/", response_model=List[Dict[str, str]])
 async def get_patients():
     return data
 
 @app.get("/patients/{patient_id}", response_model=Dict[str, str])
-async def get_patient(patient_id: str):
+async def get_patient(patient_id: int):
     for patient in data:
         if patient["Id"] == patient_id:
             return patient

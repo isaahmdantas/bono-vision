@@ -21,7 +21,7 @@ The dataset provides comprehensive information on the health factors that influe
 ## Requirements 
 
 * [Python](PYTHON) - Installation and configuration
-* [NEXTJS] - Installation and configuration
+* [NextJS](NEXTJS) - Installation and configuration
 
 
 ## Getting Started

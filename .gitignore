@@ -1,5 +1,10 @@
 bone-vision-api/__pycache__/
-.DS_STORE
+.DS_Store
+
+bone-vision-frontend/public/.DS_Store
+bone-vision-frontend/src/.DS_Store
+
+bone-vision-api/.DS_Store
 
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
