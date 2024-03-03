@@ -8,3 +8,16 @@ This repository contains dashboards and reports with data related to osteoporosi
 - `data/`: Folder containing data sets used in the analysis.
 - `converter.py`: Python script for converting data in .csv to .json, to run the script just run the command `python convert.py`
 - `docs/`: Folder contains additional documentation
+
+## Data set
+The dataset provides comprehensive information on the health factors that influence the development of osteoporosis, including demographic details, lifestyle choices, medical history, and bone health indicators. The goal is to facilitate research into osteoporosis prediction by enabling machine learning models to identify at-risk individuals. Analysis of factors such as age, sex, hormonal changes and lifestyle habits can help improve osteoporosis management and prevention strategies.
+
+
+
+## Contribution
+
+Contributions to this repository are welcome. If you would like to contribute fixes, improvements, or new analysis, please follow the project's contribution guidelines and open a pull request.
+
+
+## License
+This project is distributed under the [MIT](LICENSE).
