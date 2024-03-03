@@ -1,0 +1,40 @@
+bone-vision-api/__pycache__/
+.DS_STORE
+
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+bone-vision-frontend/node_modules
+bone-vision-frontend/.pnp
+bone-vision-frontend/.pnp.js
+bone-vision-frontend/.yarn/install-state.gz
+
+# testing
+bone-vision-frontend/coverage
+
+# next.js
+bone-vision-frontend/.next/
+bone-vision-frontend/out/
+
+# production
+bone-vision-frontend/build
+
+# misc
+bone-vision-frontend/.DS_Store
+bone-vision-frontend/*.pem
+
+# debug
+bone-vision-frontend/npm-debug.log*
+bone-vision-frontend/yarn-debug.log*
+bone-vision-frontend/yarn-error.log*
+
+# local env files
+bone-vision-frontend/.env*.local
+
+# vercel
+bone-vision-frontend/.vercel
+
+# typescript
+bone-vision-frontend/*.tsbuildinfo
+bone-vision-frontend/next-env.d.ts
